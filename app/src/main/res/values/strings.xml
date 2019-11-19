@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">SWE-STP</string>
-    <string name="No_Account">Don't Have an Account?|SignUp</string>
     <string name="ForgotPassword">Forgot Password?</string>
     <string name="prompt">Choose a Type</string>
 </resources>
