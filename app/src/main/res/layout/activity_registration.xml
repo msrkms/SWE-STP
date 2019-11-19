@@ -7,75 +7,81 @@
     android:background="@drawable/backgroundsecond"
     android:orientation="vertical"
     android:gravity="center_horizontal"
-    tools:context=".LoginActivity">
-
+    tools:context=".RegistrationActivity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Log In"
-        android:textColor="#FFFFFF"
+        android:text="Registration"
         android:textSize="50sp"
+        android:textColor="#FFFFFF"
         android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="50dp"
         android:fontFamily="monospace"
-        android:layout_marginBottom="70dp"
         />
 
     <EditText
-        android:id="@+id/loginEmail"
+        android:id="@+id/email"
         android:layout_width="390dp"
         android:layout_height="70dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="10dp"
-        android:gravity="center"
-        android:hint="Email Or ID"
+        android:hint="Email"
         android:textColorHint="#FFFFFF"
-        android:textSize="20dp"
-        android:inputType="textEmailAddress|number"
+        android:textSize="20sp"
+        android:gravity="center"
+        />
+    <EditText
+        android:id="@+id/ID"
+        android:layout_width="390dp"
+        android:layout_height="70dp"
+        android:hint="ID"
+        android:textColorHint="#FFFFFF"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_marginTop="40dp"
         />
 
 
     <EditText
-        android:id="@+id/loginPassword"
+        android:id="@+id/password"
         android:layout_width="390dp"
         android:layout_height="70dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="10dp"
-        android:gravity="center"
         android:hint="Password"
         android:textColorHint="#FFFFFF"
-        android:textSize="20dp"
-        android:inputType="textPassword"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_marginTop="40dp"
+        />
+
+    <EditText
+        android:id="@+id/confirmPassword"
+        android:layout_width="390dp"
+        android:layout_height="70dp"
+        android:hint="Confrim Password"
+        android:textColorHint="#FFFFFF"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_marginTop="40dp"
         />
 
     <Button
-        android:id="@+id/loginbtn"
+        android:id="@+id/signUpbtn"
         android:layout_width="150dp"
         android:layout_height="70dp"
+        android:text="Sign Up"
         android:layout_marginTop="20dp"
-        android:text="Log In"
         android:textAllCaps="false"
         android:textSize="20sp"
         />
 
     <TextView
-        android:id="@+id/gotoSignup"
+        android:id="@+id/alreadyHaveAccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/No_Account"
+        android:text="Already have an Account?"
         android:textSize="15sp"
         android:textColor="#FFFFFF"
-        android:layout_marginTop="50dp"
-        />
-    <TextView
-        android:id="@+id/forgotPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/ForgotPassword"
-        android:textColor="#FFFFFF"
-        android:layout_marginTop="30dp"
-        android:textSize="15dp"
+        android:layout_marginTop="10dp"
         />
 
 </LinearLayout>
