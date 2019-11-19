@@ -63,7 +63,7 @@
         android:id="@+id/gotoSignup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/No_Account"
+        android:text="Don't have an account?|Sign Up"
         android:textSize="15sp"
         android:textColor="#FFFFFF"
         android:layout_marginTop="50dp"
