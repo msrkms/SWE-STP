@@ -11,10 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/SWETheme">
-        <activity android:name=".UploadCourseOfferActivity"></activity>
+        <activity android:name=".UploadCourseOfferActivity"/>
         <activity android:name=".UploadRoutineActivity" />
         <activity android:name=".EventListActivity" />
         <activity android:name=".EventAddActivity" />
+        <activity android:name=".AdminDashboardActivity" />
+        <activity android:name=".StudentDashboardActivity"/>
         <activity android:name=".AdminDashboardActivity" />
         <activity android:name=".RegistrationActivity" />
         <activity android:name=".LoginActivity" />
