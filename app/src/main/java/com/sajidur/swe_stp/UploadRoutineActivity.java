@@ -32,7 +32,7 @@ public class UploadRoutineActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 new MaterialFilePicker()
-                        .withActivity(UploadRoutineActivity.this).withRequestCode(1)
+                        .withActivity(UploadRoutineActivity.this).withRequestCode(1000)
                         .withFilter(Pattern.compile(".*\\.xlsx$")) // Filtering files and directories by file name using regexp
                         .withFilterDirectories(true) // Set directories filterable (false by default)
                         .withHiddenFiles(true) // Show hidden files and folders
