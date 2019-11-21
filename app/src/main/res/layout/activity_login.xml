@@ -19,41 +19,49 @@
         android:textSize="50sp"
         android:gravity="center"
         android:fontFamily="monospace"
-        android:layout_marginBottom="70dp"
+        android:layout_marginBottom="100dp"
         />
 
-    <EditText
-        android:id="@+id/editTextEmail"
-        android:layout_width="390dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="10dp"
-        android:gravity="center"
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
         android:hint="Email"
-        android:textColorHint="#FFFFFF"
-        android:textSize="20dp"
-        android:inputType="textEmailAddress"
-        />
+        >
 
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:layout_marginBottom="50dp"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <EditText
-        android:id="@+id/loginPassword"
-        android:layout_width="390dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="10dp"
-        android:gravity="center"
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
         android:hint="Password"
-        android:textColorHint="#FFFFFF"
-        android:textSize="20dp"
-        android:inputType="textPassword"
-        />
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/loginPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
 
 
-    <Button
+
+
+
+
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonLogin"
-        android:layout_width="150dp"
-        android:layout_height="70dp"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
         android:layout_marginTop="20dp"
         android:text="Log In"
         android:textAllCaps="false"
@@ -65,7 +73,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:text="Don't have an account"
+        android:text="Don't have an account?"
         android:textColor="#FFFFFF"
         android:textSize="15sp" />
     <TextView

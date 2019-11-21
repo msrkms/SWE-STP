@@ -24,10 +24,11 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnUploadCourse"
-        android:layout_width="150dp"
-        android:layout_height="70dp"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
         android:layout_marginTop="70dp"
         android:layout_marginStart="110dp"
+        android:layout_marginEnd="10dp"
         android:text="Upload"
         android:textAllCaps="false"
         android:textSize="20sp"
@@ -46,8 +47,8 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnSubmitCourse"
-        android:layout_width="150dp"
-        android:layout_height="70dp"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
         android:text="Submit"
         android:textSize="20sp"
         android:textAllCaps="false"

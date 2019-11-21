@@ -23,7 +23,9 @@
 
     <EditText
         android:id="@+id/email"
-        android:layout_width="390dp"
+        android:layout_width="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
         android:layout_height="70dp"
         android:hint="Email"
         android:textColorHint="#FFFFFF"
@@ -32,7 +34,9 @@
         />
     <EditText
         android:id="@+id/ID"
-        android:layout_width="390dp"
+        android:layout_width="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
         android:layout_height="70dp"
         android:hint="ID"
         android:textColorHint="#FFFFFF"
@@ -44,7 +48,9 @@
 
     <EditText
         android:id="@+id/password"
-        android:layout_width="390dp"
+        android:layout_width="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
         android:layout_height="70dp"
         android:hint="Password"
         android:textColorHint="#FFFFFF"
@@ -55,7 +61,9 @@
 
     <EditText
         android:id="@+id/confirmPassword"
-        android:layout_width="390dp"
+        android:layout_width="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
         android:layout_height="70dp"
         android:hint="Confrim Password"
         android:textColorHint="#FFFFFF"
@@ -66,8 +74,8 @@
 
     <Button
         android:id="@+id/signUpbtn"
-        android:layout_width="150dp"
-        android:layout_height="70dp"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
         android:text="Sign Up"
         android:layout_marginTop="20dp"
         android:textAllCaps="false"

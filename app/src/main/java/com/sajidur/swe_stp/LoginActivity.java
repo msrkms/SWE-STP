@@ -8,22 +8,25 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.google.android.material.button.MaterialButton;
+import com.google.android.material.textfield.TextInputEditText;
+
 public class LoginActivity extends AppCompatActivity {
-    private Button buttonLogin;
-    private EditText editTextEmail;
+    private MaterialButton buttonLogin;
+    private TextInputEditText textInputEditTextEmail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        buttonLogin=(Button) findViewById(R.id.buttonLogin);
-        editTextEmail=(EditText) findViewById(R.id.editTextEmail);
+        buttonLogin=(MaterialButton) findViewById(R.id.buttonLogin);
+        textInputEditTextEmail=(TextInputEditText) findViewById(R.id.editTextEmail);
 
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String Email=editTextEmail.getText().toString();
+                String Email=textInputEditTextEmail.getText().toString();
 
                 if(Email.equals("admin")){
                     intentToAdmin();
