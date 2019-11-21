@@ -17,7 +17,6 @@
         <activity android:name=".EventAddActivity" />
         <activity android:name=".AdminDashboardActivity" />
         <activity android:name=".StudentDashboardActivity"/>
-        <activity android:name=".AdminDashboardActivity" />
         <activity android:name=".RegistrationActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".MainActivity">
