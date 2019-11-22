@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@drawable/backgroundsecond"
+    tools:context=".ShowClassRoutineActivity">
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Class Routine"
+        android:textSize="50sp"
+        android:textColor="#FFFFFF"
+        android:fontFamily="monospace"
+        android:layout_marginTop="10dp"
+        />
+
+    <LinearLayout
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#999898"
+        >
+
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:background="#FFFFFF"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                >
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Date/Time"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/background"
+                    />
+
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="8:30-10:00"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/background"
+                    />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="10:00-11:30"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/background"
+                    />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="11:30-01:00"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/background"
+                    />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="01:00-2:30"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/background"
+                    />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="02:30-04:00"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/background"
+                    />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="04:00-05:30"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/background"
+                    />
+
+
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:background="#FFFFFF"
+                >
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Saturday"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/background"
+                    />
+
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="TBA"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/background"
+                    />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="TBA"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/background"
+                    />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="TBA"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/background"
+                    />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="TBA"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/background"
+                    />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="TBA"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/background"
+                    />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="TBA"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/background"
+                    />
+
+
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:background="#FFFFFF"
+                >
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Sunday"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:background="@drawable/background"
+                    android:layout_marginEnd="5dp"
+                    />
+
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="TBA"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/background"
+                    />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="TBA"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/background"
+                    />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="TBA"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/background"
+                    />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="TBA"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/background"
+                    />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="TBA"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/background"
+                    />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="TBA"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/background"
+                    />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:background="#FFFFFF"
+                >
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Monday"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:background="@drawable/background"
+                    android:layout_marginEnd="5dp"
+                    />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="TBA"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/background"
+                    />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="TBA"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/background"
+                    />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="TBA"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/background"
+                    />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="TBA"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/background"
+                    />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="TBA"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/background"
+                    />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="TBA"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/background"
+                    />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:background="#FFFFFF"
+                >
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Tuesday"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:background="@drawable/background"
+                    android:layout_marginEnd="5dp"
+                    />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="TBA"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/background"
+                    />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="TBA"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/background"
+                    />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="TBA"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/background"
+                    />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="TBA"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/background"
+                    />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="TBA"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/background"
+                    />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="TBA"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/background"
+                    />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:background="#FFFFFF"
+                >
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Wednesday"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:background="@drawable/background"
+                    android:layout_marginEnd="5dp"
+                    />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="TBA"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/background"
+                    />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="TBA"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/background"
+                    />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="TBA"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/background"
+                    />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="TBA"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/background"
+                    />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="TBA"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/background"
+                    />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="TBA"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/background"
+                    />
+
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:background="#FFFFFF"
+                >
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Thursday"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:background="@drawable/background"
+                    android:layout_marginEnd="5dp"
+                    />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="TBA"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/background"
+                    />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="TBA"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/background"
+                    />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="TBA"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/background"
+                    />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="TBA"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/background"
+                    />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="TBA"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/background"
+                    />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="TBA"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/background"
+                    />
+
+
+
+            </TableRow>
+        </TableLayout>
+
+    </HorizontalScrollView>
+
+    </LinearLayout>
+
+
+</LinearLayout>
