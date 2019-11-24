@@ -33,7 +33,7 @@ public class AdminDashboardActivity extends AppCompatActivity {
         materialCardViewExamRoutine.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               // startActivity(new Intent(AdminDashboardActivity.this,UploadRoutineActivity.class));
+                startActivity(new Intent(AdminDashboardActivity.this,UploadExamRoutineActivity.class));
                // AdminDashboardActivity.this.finish();
             }
         });
