@@ -16,11 +16,11 @@ public class AdminDashboardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_dashboard);
 
-        materialCardViewClassRoutine=(MaterialCardView) findViewById(R.id.materialCardViewAdminClassRoutine);
-        materialCardViewCourseOffer=(MaterialCardView) findViewById(R.id.materialCardViewAdminCourseOffer);
-        materialCardViewEvents=(MaterialCardView) findViewById(R.id.materialCardViewAdminEvent);
-        materialCardViewExamRoutine=(MaterialCardView) findViewById(R.id.materialCardViewAdminExamRoutine);
-        materialCardViewLogout=(MaterialCardView) findViewById(R.id.materialCardViewAdminLogOut);
+        materialCardViewClassRoutine=(MaterialCardView) findViewById(R.id.materialCardViewClassRoutine);
+        materialCardViewCourseOffer=(MaterialCardView) findViewById(R.id.materialCardViewCourseOffer);
+        materialCardViewEvents=(MaterialCardView) findViewById(R.id.materialCardViewEvents);
+        materialCardViewExamRoutine=(MaterialCardView) findViewById(R.id.materialCardViewExamRoutine);
+        materialCardViewLogout=(MaterialCardView) findViewById(R.id.materialCardViewLogout);
 
         materialCardViewEvents.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,7 +33,7 @@ public class AdminDashboardActivity extends AppCompatActivity {
         materialCardViewExamRoutine.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(AdminDashboardActivity.this,UploadExamRoutineActivity.class));
+               // startActivity(new Intent(AdminDashboardActivity.this,UploadRoutineActivity.class));
                // AdminDashboardActivity.this.finish();
             }
         });
