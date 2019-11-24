@@ -27,7 +27,7 @@
             android:id="@+id/materialCardViewEvents"
             android:clickable="true"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="130dp"
             android:layout_weight="1"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="5dp"
@@ -36,7 +36,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_width="150dp"
-                android:layout_height="100dp"
+                android:layout_height="80dp"
                 android:src="@drawable/programevent"
                 />
             <TextView
@@ -46,7 +46,7 @@
                 android:textSize="15sp"
                 android:textColor="#000000"
                 android:gravity="center"
-                android:layout_marginTop="120dp"
+                android:layout_marginTop="100dp"
                 />
 
         </com.google.android.material.card.MaterialCardView>
@@ -55,16 +55,16 @@
             android:id="@+id/materialCardViewExamRoutine"
             android:clickable="true"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="130dp"
             android:layout_weight="1"
             android:layout_marginStart="5dp"
-            android:layout_marginEnd="10dp"
+            android:layout_marginEnd="5dp"
             >
             <ImageView
                 android:layout_marginTop="10dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_width="150dp"
-                android:layout_height="100dp"
+                android:layout_height="80dp"
                 android:src="@drawable/examroutine"
                 />
             <TextView
@@ -74,11 +74,37 @@
                 android:textSize="15sp"
                 android:textColor="#000000"
                 android:gravity="center"
-                android:layout_marginTop="120dp"
+                android:layout_marginTop="100dp"
                 />
 
         </com.google.android.material.card.MaterialCardView>
 
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/materialCardViewClassRoutine"
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_weight="1"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="10dp"
+            >
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="150dp"
+                android:src="@drawable/classroutine"
+                android:layout_height="80dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Class Routine"
+                android:textSize="15sp"
+                android:textColor="#000000"
+                android:gravity="center"
+                android:layout_marginTop="100dp"
+                />
+
+        </com.google.android.material.card.MaterialCardView>
 
     </LinearLayout>
 
@@ -89,11 +115,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+
+
         <com.google.android.material.card.MaterialCardView
-            android:id="@+id/materialCardViewClassRoutine"
+            android:id="@+id/materialCardViewCourseOffer"
             android:clickable="true"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="130dp"
             android:layout_weight="1"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="5dp"
@@ -102,34 +130,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_width="150dp"
-                android:src="@drawable/classroutine"
-                android:layout_height="100dp"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Class Routine"
-                android:textSize="15sp"
-                android:textColor="#000000"
-                android:gravity="center"
-                android:layout_marginTop="120dp"
-                />
-
-        </com.google.android.material.card.MaterialCardView>
-
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/materialCardViewCourseOffer"
-            android:clickable="true"
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:layout_weight="1"
-            android:layout_marginStart="5dp"
-            android:layout_marginEnd="10dp"
-            >
-            <ImageView
-                android:layout_marginTop="10dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_width="150dp"
-                android:layout_height="100dp"
+                android:layout_height="80dp"
                 android:src="@drawable/event"
                 />
             <TextView
@@ -139,29 +140,18 @@
                 android:textSize="15sp"
                 android:textColor="#000000"
                 android:gravity="center"
-                android:layout_marginTop="120dp"
+                android:layout_marginTop="100dp"
                 />
 
         </com.google.android.material.card.MaterialCardView>
-
-
-    </LinearLayout>
-
-
-
-    <LinearLayout
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/materialCardViewLogout"
             android:clickable="true"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="130dp"
             android:layout_weight="1"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="5dp"
             android:layout_marginEnd="5dp"
             >
             <ImageView
@@ -169,7 +159,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_width="150dp"
                 android:src="@drawable/logout"
-                android:layout_height="100dp"/>
+                android:layout_height="80dp"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -177,7 +167,7 @@
                 android:textSize="15sp"
                 android:textColor="#000000"
                 android:gravity="center"
-                android:layout_marginTop="120dp"
+                android:layout_marginTop="100dp"
                 />
 
         </com.google.android.material.card.MaterialCardView>
@@ -209,8 +199,8 @@
 
         </com.google.android.material.card.MaterialCardView>
 
-
     </LinearLayout>
+
 
 
 </LinearLayout>
