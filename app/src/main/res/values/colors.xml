@@ -4,4 +4,10 @@
     <color name="colorPrimaryDark">#038AFC</color>
     <color name="colorAccent">#D81B60</color>
     <color name="colorWhite">#FFFFFF</color>
+    <color name="colorWhite2">#E9E2E2</color>
+    <color name="colorButtonPrimary">#065070</color>
+    <color name="colorFullDeepBlue"> #3b5998</color>
+    <color name="colorLiteBlue">#00B0FF</color>
+    <color name="colorDark">#2f333f</color>
+    <color name="colorRoutineHeading">#495db6</color>
 </resources>

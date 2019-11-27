@@ -11,6 +11,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/SWETheme">
+        <activity android:name=".SemesterInformationActivity"></activity>
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".ChildsRoutineActivity" />
+        <activity android:name=".TeachersClassRoutineActivity" />
+        <activity android:name=".StudentRoutineActivity" />
+        <activity android:name=".ChoseClassRoutineTypeActivity" />
+        <activity android:name=".ShowClassRoutineActivity" />
         <activity android:name=".ShowEventItemDetailsSTActivity"></activity>
         <activity android:name=".ShowEventListSTActivity" />
         <activity android:name=".AddTaskActivity" />
