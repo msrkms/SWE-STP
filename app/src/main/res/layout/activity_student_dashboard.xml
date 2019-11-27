@@ -105,11 +105,13 @@
                         android:src="@drawable/classroutine2" />
 
                     <TextView
+                        android:id="@+id/textViewClassRoutine"
                         android:gravity="center"
                         android:ellipsize="marquee"
                         android:fadingEdge="horizontal"
                         android:singleLine="true"
                         android:marqueeRepeatLimit="marquee_forever"
+                        android:scrollHorizontally="true"
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -173,6 +175,7 @@
                         android:src="@drawable/appoinmnet" />
 
                     <TextView
+                        android:id="@+id/textViewAppointment"
                         android:gravity="center"
                         android:ellipsize="marquee"
                         android:fadingEdge="horizontal"
@@ -278,6 +281,7 @@
                         android:src="@drawable/exam" />
 
                     <TextView
+                        android:id="@+id/textViewExamRoutine"
                         android:gravity="center"
                         android:ellipsize="marquee"
                         android:fadingEdge="horizontal"
@@ -315,6 +319,7 @@
                         android:src="@drawable/routine" />
 
                     <TextView
+                        android:id="@+id/textViewClassDiscussion"
                         android:gravity="center"
                         android:ellipsize="marquee"
                         android:fadingEdge="horizontal"

@@ -1,0 +1,743 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundsecond"
+    tools:context=".TeachersClassRoutineActivity">
+
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="250dp"
+        android:layout_height="36dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="Class Routine"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout3"
+        android:layout_width="203dp"
+        android:layout_height="91dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView20">
+
+
+        <TextView
+            android:id="@+id/semester"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="47dp"
+            android:text="Semester :"
+            android:textColor="@color/colorWhite"
+            android:textSize="18dp" />
+
+        <Spinner
+            android:id="@+id/spinnerSemester"
+            android:layout_width="55dp"
+            android:layout_height="29dp"
+            android:layout_alignTop="@+id/semester"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="-1dp"
+            android:layout_marginEnd="28dp"
+            android:background="@color/colorWhite" />
+
+    </RelativeLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:backgroundTint="@color/colorLiteBlue"
+        android:text="show"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toEndOf="@+id/relativeLayout3"
+        app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout3">
+
+        <LinearLayout
+            android:background=""
+            android:id="@+id/llid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorDark">
+
+                <TableRow
+                    android:id="@+id/row_01"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginTop="2dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/colorRoutineHeading"
+                        android:gravity="center"
+                        android:text="Day/Time"
+                        android:textColor="#fff" />
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorRoutineHeading"
+                        android:gravity="center"
+                        android:text="8.30-10.00"
+                        android:textColor="#fff" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorRoutineHeading"
+                        android:gravity="center"
+                        android:text="10.00-11.30"
+                        android:textColor="#fff" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/colorRoutineHeading"
+                        android:gravity="center"
+                        android:text="11.30-1.00"
+                        android:textColor="#fff" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorRoutineHeading"
+                        android:gravity="center"
+                        android:text="1.00-2.30"
+                        android:textColor="#fff" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+
+                        android:layout_weight="1"
+                        android:background="@color/colorRoutineHeading"
+                        android:gravity="center"
+
+                        android:text="2.30-4.00"
+                        android:textColor="#fff" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorRoutineHeading"
+                        android:gravity="center"
+                        android:text="4.00-5.30"
+                        android:textColor="#fff" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/row_02"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginTop="2dp">
+
+                    <TextView
+                        android:id="@+id/textViewDay1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/colorRoutineHeading"
+                        android:gravity="center"
+                        android:text="Saturday"
+                        android:textColor="#fff" />
+
+                    <TextView
+                        android:id="@+id/textViewDay1Slot1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorWhite"
+                        android:gravity="center"
+                        android:text="SWE211"
+                        android:textColor="#fff" />
+
+                    <TextView
+                        android:id="@+id/textViewDay1Slot2"
+                        android:layout_width="match_parent"
+                        android:background="@color/colorWhite"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="SWE233LabA1"
+                        android:textColor="#fff" />
+
+                    <TextView
+                        android:id="@+id/textViewDay1Slot3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/colorWhite"
+                        android:gravity="center"
+                        android:text="SWE233LabA2"
+                        android:textColor="#fff" />
+
+                    <TextView
+                        android:id="@+id/textViewDay1Slot4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorWhite"
+                        android:gravity="center"
+                        android:text=" "
+                        android:textColor="#fff" />
+
+                    <TextView
+                        android:id="@+id/textViewDay1Slot5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:background="@color/colorWhite"
+
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+
+                        android:gravity="center"
+                        android:text="SWE222"
+                        android:textColor="#fff" />
+
+                    <TextView
+                        android:id="@+id/textViewDay1Slot6"
+                        android:layout_width="match_parent"
+                        android:background="@color/colorWhite"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text=" "
+                        android:textColor="#fff" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/row_03"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginTop="2dp">
+
+                    <TextView
+                        android:id="@+id/textViewDay2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/colorRoutineHeading"
+                        android:gravity="center"
+                        android:text="Sunday"
+                        android:textColor="#fff" />
+
+                    <TextView
+                        android:id="@+id/textViewDay2Slot1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorWhite"
+                        android:gravity="center"
+                        android:text="SWE211"
+                        android:textColor="#fff" />
+
+                    <TextView
+                        android:id="@+id/textViewDay2Slot2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorWhite"
+                        android:gravity="center"
+                        android:text="SWE233LabA1"
+                        android:textColor="#fff" />
+
+                    <TextView
+                        android:id="@+id/textViewDay2Slot3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/colorWhite"
+                        android:gravity="center"
+                        android:text="SWE233LabA2"
+                        android:textColor="#fff" />
+
+                    <TextView
+                        android:id="@+id/textViewDay2Slot4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorWhite"
+                        android:gravity="center"
+                        android:text="1.00-2.30"
+                        android:textColor="#fff" />
+
+                    <TextView
+                        android:id="@+id/textViewDay2Slot5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorWhite"
+
+                        android:gravity="center"
+                        android:text="SWE222"
+                        android:textColor="#fff" />
+
+                    <TextView
+                        android:id="@+id/textViewDay2Slot6"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorWhite"
+                        android:gravity="center"
+                        android:text="4.00-5.30"
+                        android:textColor="#fff" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/row_04"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginTop="2dp">
+
+                    <TextView
+                        android:id="@+id/textViewDay3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/colorRoutineHeading"
+                        android:gravity="center"
+                        android:text="Monday"
+                        android:textColor="#fff" />
+
+                    <TextView
+                        android:id="@+id/textViewDay3Slot1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorWhite"
+                        android:gravity="center"
+                        android:text="SWE211"
+                        android:textColor="#fff" />
+
+                    <TextView
+                        android:id="@+id/textViewDay3Slot2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorWhite"
+                        android:gravity="center"
+                        android:text="SWE233LabA1"
+                        android:textColor="#fff" />
+
+                    <TextView
+                        android:id="@+id/textViewDay3Slot3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/colorWhite"
+                        android:gravity="center"
+                        android:text="SWE233LabA2"
+                        android:textColor="#fff" />
+
+                    <TextView
+                        android:id="@+id/textViewDay3Slot4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorWhite"
+                        android:gravity="center"
+                        android:text="1.00-2.30"
+                        android:textColor="#fff" />
+
+                    <TextView
+                        android:id="@+id/textViewDay3Slot5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorWhite"
+
+                        android:gravity="center"
+                        android:text="SWE222"
+                        android:textColor="#fff" />
+
+                    <TextView
+                        android:id="@+id/textViewDay3Slot6"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorWhite"
+                        android:gravity="center"
+                        android:text="4.00-5.30"
+                        android:textColor="#fff" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/row_05"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginTop="2dp">
+
+                    <TextView
+                        android:id="@+id/textViewDay4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/colorRoutineHeading"
+                        android:gravity="center"
+                        android:text="Tuesday"
+                        android:textColor="#fff" />
+
+                    <TextView
+                        android:id="@+id/textViewDay4Slot1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorWhite"
+                        android:gravity="center"
+                        android:text="SWE211"
+                        android:textColor="#fff" />
+
+                    <TextView
+                        android:id="@+id/textViewDay4Slot2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorWhite"
+                        android:gravity="center"
+                        android:text="SWE233LabA1"
+                        android:textColor="#fff" />
+
+                    <TextView
+                        android:id="@+id/textViewDay4Slot3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/colorWhite"
+                        android:gravity="center"
+                        android:text="SWE233LabA2"
+                        android:textColor="#fff" />
+
+                    <TextView
+                        android:id="@+id/textViewDay4Slot4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorWhite"
+                        android:gravity="center"
+                        android:text="1.00-2.30"
+                        android:textColor="#fff" />
+
+                    <TextView
+                        android:id="@+id/textViewDay4Slot5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorWhite"
+
+                        android:gravity="center"
+                        android:text="SWE222"
+                        android:textColor="#fff" />
+
+                    <TextView
+                        android:id="@+id/textViewDay4Slot6"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorWhite"
+                        android:gravity="center"
+                        android:text="4.00-5.30"
+                        android:textColor="#fff" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/row_06"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginTop="2dp">
+
+                    <TextView
+                        android:id="@+id/textViewDay5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/colorRoutineHeading"
+                        android:gravity="center"
+                        android:text="Wednesday"
+                        android:textColor="#fff" />
+
+                    <TextView
+                        android:id="@+id/textViewDay5Slot1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorWhite"
+                        android:gravity="center"
+                        android:text="SWE211"
+                        android:textColor="#fff" />
+
+                    <TextView
+                        android:id="@+id/textViewDay5Slot2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorWhite"
+                        android:gravity="center"
+                        android:text="SWE233LabA1"
+                        android:textColor="#fff" />
+
+                    <TextView
+                        android:id="@+id/textViewDay5Slot3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/colorWhite"
+                        android:gravity="center"
+                        android:text="SWE233LabA2"
+                        android:textColor="#fff" />
+
+                    <TextView
+                        android:id="@+id/textViewDay5Slot4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorWhite"
+                        android:gravity="center"
+                        android:text="1.00-2.30"
+                        android:textColor="#fff" />
+
+                    <TextView
+                        android:id="@+id/textViewDay5Slot5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorWhite"
+
+                        android:gravity="center"
+                        android:text="SWE222"
+                        android:textColor="#fff" />
+
+                    <TextView
+                        android:id="@+id/textViewDay5Slot6"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorWhite"
+                        android:gravity="center"
+                        android:text="4.00-5.30"
+                        android:textColor="#fff" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/row_07"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginTop="2dp">
+
+                    <TextView
+                        android:id="@+id/textViewDay6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/colorRoutineHeading"
+                        android:gravity="center"
+                        android:text="Thursday"
+                        android:textColor="#fff" />
+
+                    <TextView
+                        android:id="@+id/textViewDay6Slot1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorWhite"
+                        android:gravity="center"
+                        android:text="SWE211"
+                        android:textColor="#fff" />
+
+                    <TextView
+                        android:id="@+id/textViewDay6Slot2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorWhite"
+                        android:gravity="center"
+                        android:text="SWE233LabA1"
+                        android:textColor="#fff" />
+
+                    <TextView
+                        android:id="@+id/textViewDay6Slot3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/colorWhite"
+                        android:gravity="center"
+                        android:text="SWE233LabA2"
+                        android:textColor="#fff" />
+
+                    <TextView
+                        android:id="@+id/textViewDay6Slot4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorWhite"
+                        android:gravity="center"
+                        android:text="1.00-2.30"
+                        android:textColor="#fff" />
+
+                    <TextView
+                        android:id="@+id/textViewDay6Slot5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorWhite"
+
+                        android:gravity="center"
+                        android:text="SWE222"
+                        android:textColor="#fff" />
+
+                    <TextView
+                        android:id="@+id/textViewDay6Slot6"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorWhite"
+                        android:gravity="center"
+                        android:text="4.00-5.30"
+                        android:textColor="#fff" />
+                </TableRow>
+
+
+            </TableLayout>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@color/colorLiteBlue"
+        android:text="Save As Image"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
