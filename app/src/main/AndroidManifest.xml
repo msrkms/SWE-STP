@@ -2,7 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.sajidur.swe_stp">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <application
         android:allowBackup="true"
@@ -11,18 +15,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/SWETheme">
-        <activity android:name=".SemesterInformationActivity"></activity>
+        <activity android:name=".ShowExamRoutineActivity"></activity>
+        <activity android:name=".SemesterInformationActivity" />
         <activity android:name=".ProfileActivity" />
         <activity android:name=".ChildsRoutineActivity" />
         <activity android:name=".TeachersClassRoutineActivity" />
         <activity android:name=".StudentRoutineActivity" />
         <activity android:name=".ChoseClassRoutineTypeActivity" />
         <activity android:name=".ShowClassRoutineActivity" />
-        <activity android:name=".ShowEventItemDetailsSTActivity"></activity>
+        <activity android:name=".ShowEventItemDetailsSTActivity" />
         <activity android:name=".ShowEventListSTActivity" />
         <activity android:name=".AddTaskActivity" />
         <activity android:name=".MyTaskActivity" />
-        <activity android:name=".ShowClassRoutineActivity" />
         <activity android:name=".UploadExamRoutineActivity" />
         <activity android:name=".UploadCourseOfferActivity" />
         <activity android:name=".UploadRoutineActivity" />

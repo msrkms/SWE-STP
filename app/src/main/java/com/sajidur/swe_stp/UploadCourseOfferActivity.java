@@ -1,8 +1,13 @@
 package com.sajidur.swe_stp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -25,6 +30,7 @@ public class UploadCourseOfferActivity extends AppCompatActivity {
         uploadCourse=(MaterialButton)findViewById(R.id.btnUploadCourse);
         textfileLocationCourse=(TextView)findViewById(R.id.txtFileLocationCourse);
 
+        checkFilePermissions();
 
         uploadCourse.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,13 +38,31 @@ public class UploadCourseOfferActivity extends AppCompatActivity {
                 new MaterialFilePicker()
                         .withActivity(UploadCourseOfferActivity.this)
                         .withRequestCode(1000)
-                        .withFilter(Pattern.compile(".*\\.xlsx$")) // Filtering files and directories by file name using regexp
+                        .withFilter(Pattern.compile(".*\\.txt$")) // Filtering files and directories by file name using regexp
                         .withFilterDirectories(true) // Set directories filterable (false by default)
                         .withHiddenFiles(true) // Show hidden files and folders
                         .start();
             }
         });
 
+    }
+
+
+
+    private void checkFilePermissions() {
+        if(Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP){
+            if(ContextCompat.checkSelfPermission(this,
+                    Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                    != PackageManager.PERMISSION_GRANTED){
+                ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},0);
+                //   .requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE,Manifest.permission.READ_EXTERNAL_STORAGE}, 1001)
+
+            }else{
+                System.out.println("Already");
+            }
+        }else{
+
+        }
     }
 
     @Override

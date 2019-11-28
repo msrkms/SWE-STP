@@ -41,55 +41,40 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView20">
 
-            <TextView
-                android:id="@+id/section"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/metarialTextInputLayoutSemester"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="5dp"
+                android:hint="Semester">
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteTextViewSemester"
+                    android:layout_width="130dp"
+                    android:layout_height="40dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/metarialTextInputLayoutSection"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="5dp"
                 android:layout_alignParentBottom="true"
-                android:layout_alignParentStart="true"
-                android:layout_marginBottom="17dp"
-                android:layout_marginStart="23dp"
-                android:textColor="@color/colorWhite"
-                android:text="Section :"
-                android:textSize="18dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/semester" />
+                android:hint="Section">
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteTextViewSection"
+                    android:layout_width="130dp"
+                    android:layout_height="40dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
 
 
-            <TextView
-                android:id="@+id/semester"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="14dp"
-                android:layout_marginTop="10dp"
-                android:textColor="@color/colorWhite"
-                android:text="Semester :"
-                android:textSize="18dp" />
-
-            <Spinner
-                android:id="@+id/spinnerSemester"
-                android:layout_width="55dp"
-                android:layout_height="29dp"
-                android:layout_alignParentEnd="true"
-                android:layout_alignTop="@+id/semester"
-                android:layout_marginEnd="28dp"
-                android:background="@color/colorWhite" />
-
-            <Spinner
-                android:id="@+id/spinnerSection"
-                android:layout_width="54dp"
-                android:layout_height="24dp"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginBottom="17dp"
-                android:layout_marginEnd="28dp"
-                android:background="@color/colorWhite"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/section"
-                app:layout_constraintTop_toBottomOf="@+id/spinnerSemester" />
         </RelativeLayout>
 
 
@@ -114,7 +99,6 @@
             app:layout_constraintTop_toBottomOf="@+id/relativeLayout3">
 
             <LinearLayout
-                android:background=""
                 android:id="@+id/llid"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">

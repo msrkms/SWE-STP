@@ -2,6 +2,7 @@ package com.sajidur.swe_stp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -9,6 +10,9 @@ import com.google.android.material.card.MaterialCardView;
 import android.widget.TextView;
 
 public class StudentDashboardActivity extends AppCompatActivity {
+
+    private TextView textViewAppointment,textViewClassDiscussion,textViewExamRoutine,textViewClassRoutine;
+    private MaterialCardView materialCardViewTask,materialCardViewEvent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -36,28 +36,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView20">
 
-
-        <TextView
-            android:id="@+id/semester"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/metarialTextInputLayoutSection"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+            android:layout_width="130dp"
+            android:layout_height="40dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="47dp"
-            android:text="Semester :"
-            android:textColor="@color/colorWhite"
-            android:textSize="18dp" />
+            android:layout_marginTop="10dp"
+            android:hint="Section">
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteTextViewSection"
+                android:layout_width="130dp"
+                android:layout_height="40dp" />
 
-        <Spinner
-            android:id="@+id/spinnerSemester"
-            android:layout_width="55dp"
-            android:layout_height="29dp"
-            android:layout_alignTop="@+id/semester"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="-1dp"
-            android:layout_marginEnd="28dp"
-            android:background="@color/colorWhite" />
+        </com.google.android.material.textfield.TextInputLayout>
+
 
     </RelativeLayout>
 
@@ -83,7 +76,6 @@
         app:layout_constraintTop_toBottomOf="@+id/relativeLayout3">
 
         <LinearLayout
-            android:background=""
             android:id="@+id/llid"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
