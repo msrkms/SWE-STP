@@ -12,7 +12,7 @@ import android.widget.TextView;
 public class StudentDashboardActivity extends AppCompatActivity {
 
     private TextView textViewAppointment,textViewClassDiscussion,textViewExamRoutine,textViewClassRoutine;
-    private MaterialCardView materialCardViewTask,materialCardViewEvent;
+    private MaterialCardView materialCardViewTask,materialCardViewEvent,materialCardViewHelp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +32,7 @@ public class StudentDashboardActivity extends AppCompatActivity {
 
         materialCardViewTask=(MaterialCardView)findViewById(R.id.materialCardViewMytask);
         materialCardViewEvent=(MaterialCardView)findViewById(R.id.materialCardViewEvent);
+        materialCardViewHelp=(MaterialCardView)findViewById(R.id.materialCardViewHelp);
 
         materialCardViewTask.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,6 +45,13 @@ public class StudentDashboardActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(StudentDashboardActivity.this,ShowEventListSTActivity.class));
+            }
+        });
+
+        materialCardViewHelp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(StudentDashboardActivity.this,HelpPostListActivity.class));
             }
         });
 

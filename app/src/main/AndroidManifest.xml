@@ -14,7 +14,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/SWETheme">
-        <activity android:name=".ShowExamRoutineActivity"></activity>
+        <activity android:name=".QueryItemViewActivity"></activity>
+        <activity android:name=".AddQueryActivity" />
+        <activity android:name=".HelpPostListActivity" />
+        <activity android:name=".ShowExamRoutineActivity" />
         <activity android:name=".SemesterInformationActivity" />
         <activity android:name=".ProfileActivity" />
         <activity android:name=".ChildsRoutineActivity" />

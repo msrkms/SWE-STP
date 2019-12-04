@@ -3,10 +3,22 @@ package com.sajidur.swe_stp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.google.android.material.card.MaterialCardView;
+import com.sajidur.swe_stp.Backend.Events;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class AdminDashboardActivity extends AppCompatActivity {
     private MaterialCardView materialCardViewClassRoutine,materialCardViewExamRoutine,materialCardViewEvents,materialCardViewCourseOffer,materialCardViewLogout;
@@ -25,7 +37,9 @@ public class AdminDashboardActivity extends AppCompatActivity {
         materialCardViewEvents.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(AdminDashboardActivity.this,EventListActivity.class));
+              //  startActivity(new Intent(AdminDashboardActivity.this,EventListActivity.class));
+
+                new getData().execute();
             }
         });
 
@@ -64,4 +78,59 @@ public class AdminDashboardActivity extends AppCompatActivity {
 
 
     }
+
+    class getData extends AsyncTask<Void,Void,String>{
+
+        @Override
+        protected String doInBackground(Void... voids) {
+            getVolley();
+            return null;
+        }
+
+        private void getVolley(){
+
+            String url ="http://sajidur.com/BloodApp/getdonorlist.php";
+
+            StringRequest stringRequest=new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
+                @Override
+                public void onResponse(String response) {
+                    System.out.println(response);
+                    parseData(response);
+                }
+            },
+                    new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+                            System.out.println("Error:"+error.toString());
+                        }
+                    });
+            RequestQueue requestQueue = Volley.newRequestQueue(AdminDashboardActivity.this);
+            requestQueue.add(stringRequest);
+        }
+        //volley ends here
+
+        public void parseData(String response){
+            System.out.println("Response:"+response);
+            try{
+                JSONObject jsonObject = new JSONObject(response);
+                JSONArray jsonArray = jsonObject.getJSONArray("Donor_Data");
+                for(int i=0;i<jsonArray.length();i++){
+                    JSONObject dataObj = jsonArray.getJSONObject(i);
+                    Events events= new Events();
+                    events.setTitle(dataObj.getString("Name"));
+                    events.setDescription(dataObj.getString("Email"));
+                }
+            }catch (JSONException e){
+                e.printStackTrace();
+            }
+
+        }//parseData ends here
+
+        @Override
+        protected void onPostExecute(String s) {
+            startActivity(new Intent(AdminDashboardActivity.this,EventListActivity.class));
+            AdminDashboardActivity.this.finish();
+        }
+    }
+    //end getData
 }

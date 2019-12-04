@@ -1,12 +1,19 @@
 package com.sajidur.swe_stp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
 import com.google.android.material.button.MaterialButton;
+import com.sajidur.swe_stp.Backend.DataHold;
+import com.sajidur.swe_stp.Backend.Events;
+import com.sajidur.swe_stp.Backend.RecyclerViewAdapterEvents;
+
+import java.util.ArrayList;
 
 public class EventListActivity extends AppCompatActivity {
 
@@ -18,6 +25,8 @@ public class EventListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event_list);
 
+        ArrayList<Events>eventsArrayList= DataHold.eventsArrayList;
+
         materialButtonAddNewEvent=(MaterialButton) findViewById(R.id.materialButtonAddNewEvent);
 
 
@@ -28,6 +37,12 @@ public class EventListActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        RecyclerView recyclerView = (RecyclerView)findViewById(R.id.recyclerViewEvent);
+        RecyclerViewAdapterEvents recyclerViewAdapterEvents= new RecyclerViewAdapterEvents(this,eventsArrayList);
+        recyclerView.setAdapter(recyclerViewAdapterEvents);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
 
     }
 }
