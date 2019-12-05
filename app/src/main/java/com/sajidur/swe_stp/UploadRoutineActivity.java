@@ -13,12 +13,13 @@ import android.widget.TextView;
 import com.google.android.material.button.MaterialButton;
 import com.nbsp.materialfilepicker.MaterialFilePicker;
 import com.nbsp.materialfilepicker.ui.FilePickerActivity;
+import com.sajidur.swe_stp.Backend.CourseOffer;
 
 import java.util.regex.Pattern;
 
 public class UploadRoutineActivity extends AppCompatActivity {
 
-    MaterialButton Upload;
+    MaterialButton materialButtonUpload,materialButtonSubmit;
     TextView locationText;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,11 +30,12 @@ public class UploadRoutineActivity extends AppCompatActivity {
             requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},1001);
         }
 
-        Upload = (MaterialButton)findViewById(R.id.btnUpload);
+        materialButtonUpload = (MaterialButton)findViewById(R.id.btnUpload);
         locationText=(TextView)findViewById(R.id.txtFileLocation);
+        materialButtonSubmit=(MaterialButton) findViewById(R.id.btnSubmit);
 
 
-        Upload.setOnClickListener(new View.OnClickListener() {
+         materialButtonUpload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -43,6 +45,14 @@ public class UploadRoutineActivity extends AppCompatActivity {
 
             }
         });
+
+
+         materialButtonSubmit.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View view) {
+
+             }
+         });
 
     }
 

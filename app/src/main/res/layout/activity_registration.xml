@@ -22,7 +22,7 @@
         />
 
     <EditText
-        android:id="@+id/email"
+        android:id="@+id/editTextemail"
         android:layout_width="match_parent"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
@@ -33,7 +33,7 @@
         android:gravity="center"
         />
     <EditText
-        android:id="@+id/ID"
+        android:id="@+id/editTextID"
         android:layout_width="match_parent"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
@@ -47,12 +47,13 @@
 
 
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/editTextpassword"
         android:layout_width="match_parent"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:layout_height="70dp"
         android:hint="Password"
+        android:inputType="textPassword"
         android:textColorHint="#FFFFFF"
         android:textSize="20sp"
         android:gravity="center"
@@ -60,12 +61,13 @@
         />
 
     <EditText
-        android:id="@+id/confirmPassword"
+        android:id="@+id/editTextconfirmPassword"
         android:layout_width="match_parent"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:layout_height="70dp"
         android:hint="Confrim Password"
+        android:inputType="textPassword"
         android:textColorHint="#FFFFFF"
         android:textSize="20sp"
         android:gravity="center"
@@ -73,7 +75,7 @@
         />
 
     <Button
-        android:id="@+id/signUpbtn"
+        android:id="@+id/buttonsignUp"
         android:layout_width="120dp"
         android:layout_height="60dp"
         android:text="Sign Up"
@@ -83,7 +85,7 @@
         />
 
     <TextView
-        android:id="@+id/alreadyHaveAccount"
+        android:id="@+id/textViewalreadyHaveAccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Already have an Account?"
