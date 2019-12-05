@@ -15,11 +15,12 @@ import android.widget.TextView;
 import com.google.android.material.button.MaterialButton;
 import com.nbsp.materialfilepicker.MaterialFilePicker;
 import com.nbsp.materialfilepicker.ui.FilePickerActivity;
+import com.sajidur.swe_stp.Backend.CourseOffer;
 
 import java.util.regex.Pattern;
 
 public class UploadCourseOfferActivity extends AppCompatActivity {
-    MaterialButton uploadCourse;
+    MaterialButton uploadCourse,materialButtonSubmit;
     TextView textfileLocationCourse;
 
     @Override
@@ -33,6 +34,7 @@ public class UploadCourseOfferActivity extends AppCompatActivity {
 
         uploadCourse=(MaterialButton)findViewById(R.id.btnUploadCourse);
         textfileLocationCourse=(TextView)findViewById(R.id.txtFileLocationCourse);
+        materialButtonSubmit=(MaterialButton) findViewById(R.id.btnSubmitCourse);
 
         checkFilePermissions();
 
@@ -43,6 +45,15 @@ public class UploadCourseOfferActivity extends AppCompatActivity {
                         .withActivity(UploadCourseOfferActivity.this)
                         .withRequestCode(1000)
                         .start();
+            }
+        });
+
+        materialButtonSubmit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String path= textfileLocationCourse.getText().toString();
+                CourseOffer courseOffer= new CourseOffer();
+                courseOffer.read(path);
             }
         });
 
