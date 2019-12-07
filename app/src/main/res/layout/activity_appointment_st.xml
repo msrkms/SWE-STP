@@ -5,13 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/backgroundsecond"
-    tools:context=".EventListActivity">
+    tools:context=".AppointmentSTActivity">
+
 
     <TextView
         android:gravity="center_horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Events"
+        android:text="Appointments"
         android:textSize="30sp"
         android:textColor="#FFFFFF"
         android:fontFamily="monospace"
@@ -19,14 +20,15 @@
 
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewEvent"
+        android:id="@+id/appointmentList"
         android:layout_marginTop="60dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+
         />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/materialButtonAddNewEvent"
+        android:id="@+id/floatingAddAppointmentButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
@@ -36,5 +38,6 @@
         app:fabSize="normal"
         app:tint="@color/colorWhite"
         />
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

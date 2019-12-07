@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.sajidur.swe_stp.Backend.DataHold;
 import com.sajidur.swe_stp.Backend.Events;
 import com.sajidur.swe_stp.Backend.RecyclerViewAdapterEvents;
@@ -18,7 +19,7 @@ import java.util.ArrayList;
 public class EventListActivity extends AppCompatActivity {
 
 
-    private MaterialButton materialButtonAddNewEvent;
+    private FloatingActionButton materialButtonAddNewEvent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +28,7 @@ public class EventListActivity extends AppCompatActivity {
 
         ArrayList<Events>eventsArrayList= DataHold.eventsArrayList;
 
-        materialButtonAddNewEvent=(MaterialButton) findViewById(R.id.materialButtonAddNewEvent);
+        materialButtonAddNewEvent=(FloatingActionButton) findViewById(R.id.materialButtonAddNewEvent);
 
 
         materialButtonAddNewEvent.setOnClickListener(new View.OnClickListener() {
