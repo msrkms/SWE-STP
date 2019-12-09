@@ -25,7 +25,7 @@ import java.util.ArrayList;
 public class AdminDashboardActivity extends AppCompatActivity {
     private MaterialCardView materialCardViewClassRoutine,materialCardViewExamRoutine,materialCardViewEvents,materialCardViewCourseOffer,materialCardViewLogout;
 
-    ArrayList<Events>eventsArrayList=new ArrayList<Events>();
+    ArrayList<Events>eventsArrayList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -116,8 +116,7 @@ public class AdminDashboardActivity extends AppCompatActivity {
             System.out.println("Response:"+response);
             try{
                 JSONArray jsonArray=new JSONArray(response);
-
-
+                eventsArrayList=new ArrayList<Events>();
                 for(int i=0;i<jsonArray.length();i++){
                     JSONObject dataObj = jsonArray.getJSONObject(i);
                     Events events= new Events();
@@ -128,11 +127,13 @@ public class AdminDashboardActivity extends AppCompatActivity {
                     events.setEventTime("time");
                     events.setImageUrl("attachmentUrl");
                     eventsArrayList.add(events);
+
                 }
                 if(!(DataHold.eventsArrayList==null)){
                     DataHold.eventsArrayList.clear();
                 }
                 DataHold.eventsArrayList=eventsArrayList;
+                System.out.println("test"+eventsArrayList.size());
             }catch (JSONException e){
                 e.printStackTrace();
             }

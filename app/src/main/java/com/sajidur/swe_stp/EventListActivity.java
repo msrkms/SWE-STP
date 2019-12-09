@@ -41,7 +41,7 @@ public class EventListActivity extends AppCompatActivity {
         });
 
         RecyclerView recyclerView = (RecyclerView)findViewById(R.id.recyclerViewEvent);
-        RecyclerViewAdapterEvents recyclerViewAdapterEvents= new RecyclerViewAdapterEvents(this,eventsArrayList);
+        RecyclerViewAdapterEvents recyclerViewAdapterEvents= new RecyclerViewAdapterEvents(this,DataHold.eventsArrayList);
         recyclerView.setAdapter(recyclerViewAdapterEvents);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 

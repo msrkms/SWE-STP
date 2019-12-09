@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -39,6 +40,10 @@ public class RecyclerViewAdapterEvents extends RecyclerView.Adapter<RecyclerView
             holder.textViewTitle.setText(eventsArrayList.get(position).getTitle());
 
             Picasso.get().load(eventsArrayList.get(position).getImageUrl()).into(holder.imageViewImage);
+        }
+
+        else{
+            Toast.makeText(mContext,"Data Not Arrived",Toast.LENGTH_LONG).show();
         }
     }
 
