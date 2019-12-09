@@ -45,10 +45,10 @@
                 android:hint="Title">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputEditTextTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="text"
-                    />
+                    android:inputType="text" />
             </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -59,27 +59,11 @@
                 android:hint="Description">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputEditDetails"
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
-                    android:inputType="text"
-                    />
+                    android:inputType="text" />
             </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="4dp"
-                android:hint="Location">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="text"
-                    />
-            </com.google.android.material.textfield.TextInputLayout>
-
-
-
 
 
             <com.google.android.material.textfield.TextInputLayout
@@ -88,11 +72,11 @@
                         android:layout_margin="4dp"
                         android:hint="Date">
 
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:inputType="text"
-                            />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputEditTextDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
                     </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -103,10 +87,10 @@
                 android:hint="Time">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputEditTextTime"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="text"
-                    />
+                    android:inputType="text" />
             </com.google.android.material.textfield.TextInputLayout>
 
 
