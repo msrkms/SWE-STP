@@ -12,7 +12,7 @@ import android.widget.TextView;
 public class StudentDashboardActivity extends AppCompatActivity {
 
     private TextView textViewAppointment,textViewClassDiscussion,textViewExamRoutine,textViewClassRoutine;
-    private MaterialCardView materialCardViewTask,materialCardViewEvent,materialCardViewHelp;
+    private MaterialCardView materialCardViewTask,materialCardViewEvent,materialCardViewHelp,materialCardViewProfile,materialCardViewAppointment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +33,10 @@ public class StudentDashboardActivity extends AppCompatActivity {
         materialCardViewTask=(MaterialCardView)findViewById(R.id.materialCardViewMytask);
         materialCardViewEvent=(MaterialCardView)findViewById(R.id.materialCardViewEvent);
         materialCardViewHelp=(MaterialCardView)findViewById(R.id.materialCardViewHelp);
+        materialCardViewProfile=(MaterialCardView) findViewById(R.id.materialCardViewProfile);
+        materialCardViewAppointment=(MaterialCardView) findViewById(R.id.materialCardViewAppointment);
+
+
 
         materialCardViewTask.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,6 +56,20 @@ public class StudentDashboardActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(StudentDashboardActivity.this,HelpPostListActivity.class));
+            }
+        });
+
+        materialCardViewProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(StudentDashboardActivity.this,ProfileActivity.class));
+            }
+        });
+
+        materialCardViewAppointment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               // startActivity(StudentDashboardActivity.this,Appo);
             }
         });
 

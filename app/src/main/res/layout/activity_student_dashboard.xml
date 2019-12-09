@@ -189,6 +189,7 @@
             </com.google.android.material.card.MaterialCardView>
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="wrap_content"
+                android:id="@+id/materialCardViewProfile"
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
                 app:cardCornerRadius="12dp"

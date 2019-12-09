@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -53,9 +54,11 @@ public class RecyclerViewAdapterEvents extends RecyclerView.Adapter<RecyclerView
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView textViewTitle;
+        ImageView imageViewEvent;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            textViewTitle=(TextView)itemView.findViewById(R.id.eventlistTitle);
+            textViewTitle=(TextView)itemView.findViewById(R.id.textViewEventTitle);
+            imageViewEvent=(ImageView) itemView.findViewById(R.id.imageevent);
         }
     }
 }
