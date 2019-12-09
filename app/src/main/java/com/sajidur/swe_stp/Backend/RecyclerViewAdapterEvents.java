@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.sajidur.swe_stp.R;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -36,6 +37,8 @@ public class RecyclerViewAdapterEvents extends RecyclerView.Adapter<RecyclerView
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         if(eventsArrayList!=null){
             holder.textViewTitle.setText(eventsArrayList.get(position).getTitle());
+
+            Picasso.get().load(eventsArrayList.get(position).getImageUrl()).into(holder.imageViewImage);
         }
     }
 
