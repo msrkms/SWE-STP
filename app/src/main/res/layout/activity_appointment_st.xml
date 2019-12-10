@@ -4,30 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@drawable/backgroundsecond"
-    tools:context=".EventListActivity">
+    tools:context=".AppointmentSTActivity">
+
 
     <TextView
         android:gravity="center_horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Events"
+        android:text="Appointments"
         android:textSize="30sp"
         android:textColor="#FFFFFF"
         android:fontFamily="monospace"
         />
 
 
-    <ListView
-        android:id="@+id/eventList"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/appointmentList"
+        android:layout_marginTop="60dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:dividerHeight="2dp"
-        android:layout_marginTop="60dp"/>
+
+        />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/materialButtonAddNewEvent"
+        android:id="@+id/floatingAddAppointmentButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
@@ -37,5 +38,6 @@
         app:fabSize="normal"
         app:tint="@color/colorWhite"
         />
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -4,12 +4,15 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.sajidur.swe_stp.R;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -35,6 +38,12 @@ public class RecyclerViewAdapterEvents extends RecyclerView.Adapter<RecyclerView
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         if(eventsArrayList!=null){
             holder.textViewTitle.setText(eventsArrayList.get(position).getTitle());
+
+            Picasso.get().load(eventsArrayList.get(position).getImageUrl()).into(holder.imageViewImage);
+        }
+
+        else{
+            Toast.makeText(mContext,"Data Not Arrived",Toast.LENGTH_LONG).show();
         }
     }
 
@@ -53,8 +62,10 @@ public class RecyclerViewAdapterEvents extends RecyclerView.Adapter<RecyclerView
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView textViewTitle;
+        ImageView imageViewImage;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+            imageViewImage=(ImageView)itemView.findViewById(R.id.eventlistImage);
             textViewTitle=(TextView)itemView.findViewById(R.id.eventlistTitle);
         }
     }

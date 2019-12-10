@@ -15,14 +15,17 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.android.material.card.MaterialCardView;
 import com.sajidur.swe_stp.Backend.Events;
-
+import com.sajidur.swe_stp.Backend.DataHold;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
+
 public class AdminDashboardActivity extends AppCompatActivity {
     private MaterialCardView materialCardViewClassRoutine,materialCardViewExamRoutine,materialCardViewEvents,materialCardViewCourseOffer,materialCardViewLogout;
 
+    ArrayList<Events>eventsArrayList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,9 +40,9 @@ public class AdminDashboardActivity extends AppCompatActivity {
         materialCardViewEvents.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-              //  startActivity(new Intent(AdminDashboardActivity.this,EventListActivity.class));
+              startActivity(new Intent(AdminDashboardActivity.this,EventListActivity.class));
 
-                new getData().execute();
+                //new getData().execute();
             }
         });
 
@@ -79,6 +82,7 @@ public class AdminDashboardActivity extends AppCompatActivity {
 
     }
 
+    /*
     class getData extends AsyncTask<Void,Void,String>{
 
         @Override
@@ -89,7 +93,7 @@ public class AdminDashboardActivity extends AppCompatActivity {
 
         private void getVolley(){
 
-            String url ="http://sajidur.com/BloodApp/getdonorlist.php";
+            String url ="http://swestp.sajidur.com/api/getallevents";
 
             StringRequest stringRequest=new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
                 @Override
@@ -112,14 +116,25 @@ public class AdminDashboardActivity extends AppCompatActivity {
         public void parseData(String response){
             System.out.println("Response:"+response);
             try{
-                JSONObject jsonObject = new JSONObject(response);
-                JSONArray jsonArray = jsonObject.getJSONArray("Donor_Data");
+                JSONArray jsonArray=new JSONArray(response);
+                eventsArrayList=new ArrayList<Events>();
                 for(int i=0;i<jsonArray.length();i++){
                     JSONObject dataObj = jsonArray.getJSONObject(i);
                     Events events= new Events();
-                    events.setTitle(dataObj.getString("Name"));
-                    events.setDescription(dataObj.getString("Email"));
+                    events.setID("id");
+                    events.setTitle(dataObj.getString("title"));
+                    events.setDescription(dataObj.getString("details"));
+                    events.setEventDate("date");
+                    events.setEventTime("time");
+                    events.setImageUrl("attachmentUrl");
+                    eventsArrayList.add(events);
+
                 }
+                if(!(DataHold.eventsArrayList==null)){
+                    DataHold.eventsArrayList.clear();
+                }
+                DataHold.eventsArrayList=eventsArrayList;
+                System.out.println("test"+eventsArrayList.size());
             }catch (JSONException e){
                 e.printStackTrace();
             }
@@ -129,8 +144,8 @@ public class AdminDashboardActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(String s) {
             startActivity(new Intent(AdminDashboardActivity.this,EventListActivity.class));
-            AdminDashboardActivity.this.finish();
+
         }
-    }
+    }*/
     //end getData
 }

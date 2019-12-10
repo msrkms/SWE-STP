@@ -3,16 +3,29 @@ package com.sajidur.swe_stp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.google.android.material.card.MaterialCardView;
+import com.sajidur.swe_stp.Backend.Events;
+
 import android.widget.TextView;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class StudentDashboardActivity extends AppCompatActivity {
 
     private TextView textViewAppointment,textViewClassDiscussion,textViewExamRoutine,textViewClassRoutine;
-    private MaterialCardView materialCardViewTask,materialCardViewEvent,materialCardViewHelp;
+    private MaterialCardView materialCardViewTask,materialCardViewEvent,materialCardViewHelp,materialCardViewAppointment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +46,7 @@ public class StudentDashboardActivity extends AppCompatActivity {
         materialCardViewTask=(MaterialCardView)findViewById(R.id.materialCardViewMytask);
         materialCardViewEvent=(MaterialCardView)findViewById(R.id.materialCardViewEvent);
         materialCardViewHelp=(MaterialCardView)findViewById(R.id.materialCardViewHelp);
+        materialCardViewAppointment=(MaterialCardView)findViewById(R.id.materialCardViewAppointment);
 
         materialCardViewTask.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,6 +59,7 @@ public class StudentDashboardActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(StudentDashboardActivity.this,ShowEventListSTActivity.class));
+
             }
         });
 
@@ -55,5 +70,14 @@ public class StudentDashboardActivity extends AppCompatActivity {
             }
         });
 
+        materialCardViewAppointment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(StudentDashboardActivity.this,AppointmentSTActivity.class));
+            }
+        });
+
     }
+
+
 }

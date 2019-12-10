@@ -1,18 +1,21 @@
 package com.sajidur.swe_stp.Backend;
 
+import android.widget.ImageView;
+
 public class Events {
 
-    private int ID;
+    private String ID;
     private String Title;
     private String Description;
     private String EventTime;
     private String EventDate;
+    private String ImageUrl;
 
-    public int getID(){
+    public String getID(){
         return ID;
     }
 
-    public void setID(int ID){
+    public void setID(String ID){
         this.ID=ID;
     }
 
@@ -47,5 +50,9 @@ public class Events {
     public void setEventDate(String EventDate){
         this.EventDate=EventDate;
     }
+
+    public String getImageUrl(){ return ImageUrl; }
+
+    public void setImageUrl(String ImageUrl){ this.ImageUrl=ImageUrl;}
 
 }

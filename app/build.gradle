@@ -29,6 +29,9 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     implementation 'com.sun.mail:android-mail:1.5.5'
     implementation 'com.sun.mail:android-activation:1.5.5'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+
     androidTestImplementation 'androidx.test:runner:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
     implementation files('libs/poi-3.12-android-a.jar')
