@@ -40,9 +40,9 @@ public class AdminDashboardActivity extends AppCompatActivity {
         materialCardViewEvents.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-              //  startActivity(new Intent(AdminDashboardActivity.this,EventListActivity.class));
+              startActivity(new Intent(AdminDashboardActivity.this,EventListActivity.class));
 
-                new getData().execute();
+                //new getData().execute();
             }
         });
 
@@ -82,6 +82,7 @@ public class AdminDashboardActivity extends AppCompatActivity {
 
     }
 
+    /*
     class getData extends AsyncTask<Void,Void,String>{
 
         @Override
@@ -145,6 +146,6 @@ public class AdminDashboardActivity extends AppCompatActivity {
             startActivity(new Intent(AdminDashboardActivity.this,EventListActivity.class));
 
         }
-    }
+    }*/
     //end getData
 }

@@ -20,10 +20,12 @@
         android:layout_marginBottom="10dp"
         />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/eventListST"
+    <ListView
+        android:id="@+id/listViewEventST"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        />
+        android:dividerHeight="2dp">
+
+    </ListView>
 
 </LinearLayout>

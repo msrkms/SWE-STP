@@ -58,8 +58,8 @@ public class StudentDashboardActivity extends AppCompatActivity {
         materialCardViewEvent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //startActivity(new Intent(StudentDashboardActivity.this,ShowEventListSTActivity.class));
-                new getData().execute();
+                startActivity(new Intent(StudentDashboardActivity.this,ShowEventListSTActivity.class));
+
             }
         });
 
@@ -79,58 +79,5 @@ public class StudentDashboardActivity extends AppCompatActivity {
 
     }
 
-    //getEventData
-    class getData extends AsyncTask<Void,Void,String> {
 
-        @Override
-        protected String doInBackground(Void... voids) {
-            getVolley();
-            return null;
-        }
-
-        private void getVolley(){
-
-            String url ="http://sajidur.com/BloodApp/getdonorlist.php";
-
-            StringRequest stringRequest=new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
-                @Override
-                public void onResponse(String response) {
-                    System.out.println(response);
-                    parseData(response);
-                }
-            },
-                    new Response.ErrorListener() {
-                        @Override
-                        public void onErrorResponse(VolleyError error) {
-                            System.out.println("Error:"+error.toString());
-                        }
-                    });
-            RequestQueue requestQueue = Volley.newRequestQueue(StudentDashboardActivity.this);
-            requestQueue.add(stringRequest);
-        }
-        //volley ends here
-
-        public void parseData(String response){
-            System.out.println("Response:"+response);
-            try{
-                JSONObject jsonObject = new JSONObject(response);
-                JSONArray jsonArray = jsonObject.getJSONArray("Donor_Data");
-                for(int i=0;i<jsonArray.length();i++){
-                    JSONObject dataObj = jsonArray.getJSONObject(i);
-                    Events events= new Events();
-                    events.setTitle(dataObj.getString("Name"));
-                    events.setDescription(dataObj.getString("Email"));
-                }
-            }catch (JSONException e){
-                e.printStackTrace();
-            }
-
-        }//parseData ends here
-
-        @Override
-        protected void onPostExecute(String s) {
-            startActivity(new Intent(StudentDashboardActivity.this,ShowEventListSTActivity.class));
-            StudentDashboardActivity.this.finish();
-        }
-    }
 }
