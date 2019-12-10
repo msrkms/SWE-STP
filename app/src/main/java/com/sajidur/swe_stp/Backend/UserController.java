@@ -39,9 +39,9 @@ public class UserController {
 
     public String getUserRole(String Email, String ID){
         String UserRole="Not Vaild";
-        if(Email.contains("-") && ID.equals("-")){
+        if(Email.contains("-") && ID.contains("-")){
             UserRole="Student";
-        }else if(!Email.contains("-") && !ID.equals("-")){
+        }else if(!Email.contains("-") && !ID.contains("-")){
             UserRole="Teacher";
         }else{
             UserRole="Not Valid";

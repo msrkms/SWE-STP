@@ -25,7 +25,7 @@ import org.json.JSONObject;
 public class StudentDashboardActivity extends AppCompatActivity {
 
     private TextView textViewAppointment,textViewClassDiscussion,textViewExamRoutine,textViewClassRoutine;
-    private MaterialCardView materialCardViewTask,materialCardViewEvent,materialCardViewHelp,materialCardViewAppointment;
+    private MaterialCardView materialCardViewTask,materialCardViewEvent,materialCardViewHelp,materialCardViewProfile,materialCardViewAppointment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +47,10 @@ public class StudentDashboardActivity extends AppCompatActivity {
         materialCardViewEvent=(MaterialCardView)findViewById(R.id.materialCardViewEvent);
         materialCardViewHelp=(MaterialCardView)findViewById(R.id.materialCardViewHelp);
         materialCardViewAppointment=(MaterialCardView)findViewById(R.id.materialCardViewAppointment);
+        materialCardViewProfile=(MaterialCardView) findViewById(R.id.materialCardViewProfile);
+        materialCardViewAppointment=(MaterialCardView) findViewById(R.id.materialCardViewAppointment);
+
+
 
         materialCardViewTask.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,6 +78,20 @@ public class StudentDashboardActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(StudentDashboardActivity.this,AppointmentSTActivity.class));
+            }
+        });
+
+        materialCardViewProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(StudentDashboardActivity.this,ProfileActivity.class));
+            }
+        });
+
+        materialCardViewAppointment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               // startActivity(StudentDashboardActivity.this,Appo);
             }
         });
 

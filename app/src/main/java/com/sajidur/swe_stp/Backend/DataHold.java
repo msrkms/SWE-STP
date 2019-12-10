@@ -12,6 +12,7 @@ public class DataHold {
 
 
 public static User user;
+public  static String UserEmail;
 public static boolean IsSuccess;
 public  static JSONObject JObject;
 }

@@ -19,6 +19,10 @@ public class User {
         this.setPassword(Password);
     }
 
+    public  User(){
+
+    }
+
     public String getEmail() {
         return Email;
     }

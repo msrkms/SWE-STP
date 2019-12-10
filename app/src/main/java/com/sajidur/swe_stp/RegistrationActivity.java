@@ -20,6 +20,7 @@ import com.android.volley.toolbox.Volley;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.sajidur.swe_stp.Backend.DataHold;
 import com.sajidur.swe_stp.Backend.DataVerification;
+import com.sajidur.swe_stp.Backend.EmailSender;
 import com.sajidur.swe_stp.Backend.Model.User;
 import com.sajidur.swe_stp.Backend.MyUrl;
 import com.sajidur.swe_stp.Backend.UserController;
@@ -156,7 +157,9 @@ public class RegistrationActivity extends AppCompatActivity {
             postparams.put("email",user.getEmail());
             postparams.put("id",user.getID());
             postparams.put("password",user.getPassword());
-
+            postparams.put("role",user.getRole());
+            postparams.put("vCode",user.getVcode());
+            postparams.put("isVerified","UnVerified");
 
         } catch (JSONException e) {
             e.printStackTrace();
@@ -168,18 +171,33 @@ public class RegistrationActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(Object response) {
                         try{
+
+                            System.out.println(response.toString());
                             JSONObject jsonObject= new JSONObject(response.toString());
                             if(!(jsonObject==null)){
-                                DataHold.IsSuccess=true;
-                                new MaterialAlertDialogBuilder(RegistrationActivity.this)
-                                        .setTitle("Registration Success")
-                                        .setMessage("Please Confirm Your Email")
-                                        .setNegativeButton("ok",null)
-                                        .show();
+
+
+                                    EmailSender emailSender=new EmailSender();
+                                    emailSender.SendVerificationEmail(user.getEmail(),user.getVcode());
+                                    DataHold.IsSuccess=true;
+                                    progressDialog.dismiss();
+                                    new MaterialAlertDialogBuilder(RegistrationActivity.this)
+                                            .setTitle("Registration Success")
+                                            .setMessage("Please Confirm Your Email.You are not able to login without email verification")
+                                            .setNegativeButton("ok",null)
+                                            .show();
+
+
                             }
                         }catch (JSONException e) {
-                            e.printStackTrace();
+
                             DataHold.IsSuccess=false;
+                            progressDialog.dismiss();
+                            new MaterialAlertDialogBuilder(RegistrationActivity.this)
+                                    .setTitle("Registration Not Success")
+                                    .setMessage("Something is not valid")
+                                    .setNegativeButton("ok",null)
+                                    .show();
                         }
 
                     }
@@ -189,7 +207,13 @@ public class RegistrationActivity extends AppCompatActivity {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-
+                        System.out.println(error.toString());
+                        progressDialog.dismiss();
+                        new MaterialAlertDialogBuilder(RegistrationActivity.this)
+                                .setTitle("Registration Not Success")
+                                .setMessage("Cannot Connect Server")
+                                .setNegativeButton("ok",null)
+                                .show();
                     }
                 });
 
