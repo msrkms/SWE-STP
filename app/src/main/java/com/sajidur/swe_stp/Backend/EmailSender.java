@@ -2,11 +2,11 @@ package com.sajidur.swe_stp.Backend;
 
 import android.os.AsyncTask;
 
-public class EmailVerification {
+public class EmailSender {
 
     String Body;
     String Email;
-    public void SendEmail(final String UserEmail, String Vcode){
+    public void SendVerificationEmail(final String UserEmail, String Vcode){
         Email=UserEmail;
         Body="Your Verification Code is "+Vcode;
         new Thread(new Runnable() {
@@ -36,7 +36,7 @@ public class EmailVerification {
 
 
 }
-
+/*
 class sendmail extends AsyncTask<Void,Void,Boolean> {
 
     @Override
@@ -60,4 +60,8 @@ class sendmail extends AsyncTask<Void,Void,Boolean> {
             return false;
         }
     }
+
+
 }
+
+ */

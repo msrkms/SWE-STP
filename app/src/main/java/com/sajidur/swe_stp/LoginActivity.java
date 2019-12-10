@@ -22,6 +22,7 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.android.material.button.MaterialButton;
@@ -45,11 +46,13 @@ public class LoginActivity extends AppCompatActivity {
     ProgressDialog progressDialog;
     private TextView textViewSignUp,textViewForgetPassword;
     private TextInputEditText textInputEditTextEmail,textInputEditTextPassword;
+    private  User user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
 
         buttonLogin=(MaterialButton) findViewById(R.id.buttonLogin);
         textInputEditTextEmail=(TextInputEditText) findViewById(R.id.editTextEmail);
@@ -70,6 +73,7 @@ public class LoginActivity extends AppCompatActivity {
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                user=new User();
                 String Email=textInputEditTextEmail.getText().toString();
                 String Password=textInputEditTextPassword.getText().toString();
                 if(Email.equals("admin")){
@@ -136,14 +140,24 @@ public class LoginActivity extends AppCompatActivity {
 
         final String inputEmail=Email;
 
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, Url,
-                new Response.Listener<String>() {
+        JSONObject postparams = new JSONObject();
+        try {
+
+            postparams.put("email",user.getEmail());
+            postparams.put("password",user.getPassword());
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, MyUrl.Login,postparams,
+                new  Response.Listener() {
                     @Override
-                    public void onResponse(String response) {
+                    public void onResponse(Object response) {
                         try {
                             User user= new User();
 
-                            JSONObject dataobj = new JSONObject(response);
+                            JSONObject dataobj = new JSONObject(response.toString());
                             user.setRole(dataobj.getString("role"));
                             user.setPassword(dataobj.getString("password"));
                             user.setID(dataobj.getString("id"));
@@ -198,7 +212,7 @@ public class LoginActivity extends AppCompatActivity {
         // request queue
         RequestQueue requestQueue = Volley.newRequestQueue(this);
 
-        requestQueue.add(stringRequest);
+        requestQueue.add(jsonObjectRequest);
     }
 
 
