@@ -22,10 +22,12 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.File;
+
 public class StudentDashboardActivity extends AppCompatActivity {
 
     private TextView textViewAppointment,textViewClassDiscussion,textViewExamRoutine,textViewClassRoutine;
-    private MaterialCardView materialCardViewTask,materialCardViewEvent,materialCardViewHelp,materialCardViewProfile,materialCardViewAppointment;
+    private MaterialCardView materialCardViewTask,materialCardViewEvent,materialCardViewHelp,materialCardViewProfile,materialCardViewAppointment,materialCardViewLogout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +51,8 @@ public class StudentDashboardActivity extends AppCompatActivity {
         materialCardViewAppointment=(MaterialCardView)findViewById(R.id.materialCardViewAppointment);
         materialCardViewProfile=(MaterialCardView) findViewById(R.id.materialCardViewProfile);
         materialCardViewAppointment=(MaterialCardView) findViewById(R.id.materialCardViewAppointment);
+        materialCardViewLogout=(MaterialCardView) findViewById(R.id.materialCardViewLogout);
+
 
 
 
@@ -95,6 +99,23 @@ public class StudentDashboardActivity extends AppCompatActivity {
             }
         });
 
+        materialCardViewLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                deleteLoginFile();
+                startActivity(new Intent(StudentDashboardActivity.this,LoginActivity.class));
+            }
+        });
+
+    }
+
+    private void deleteLoginFile(){
+        File file=new File(getFilesDir().getAbsolutePath()+"/"+"User.txt");
+        try {
+            file.delete();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 

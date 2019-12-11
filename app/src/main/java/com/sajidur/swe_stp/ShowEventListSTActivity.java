@@ -19,6 +19,7 @@ import com.android.volley.toolbox.Volley;
 import com.sajidur.swe_stp.Backend.DataHold;
 import com.sajidur.swe_stp.Backend.Events;
 import com.sajidur.swe_stp.Backend.ListViewAdapterEvent;
+import com.sajidur.swe_stp.Backend.MyUrl;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -77,7 +78,7 @@ public class ShowEventListSTActivity extends AppCompatActivity {
 
     private void getAllEvents(){
 
-        String url="http://swestp.sajidur.com/api/getallevents";
+        String url= MyUrl.ALLEVENTS;
 
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override

@@ -16,6 +16,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/SWETheme">
+        <activity android:name=".VerifyAccountActivity"></activity>
         <activity android:name=".AddAppointmentActivity" />
         <activity android:name=".AppointmentSTActivity" />
         <activity android:name=".QueryItemViewActivity" />

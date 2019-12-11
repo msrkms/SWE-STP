@@ -172,10 +172,8 @@ public class RegistrationActivity extends AppCompatActivity {
                     public void onResponse(Object response) {
                         try{
 
-                            System.out.println(response.toString());
                             JSONObject jsonObject= new JSONObject(response.toString());
-                            if(!(jsonObject==null)){
-
+                            if((jsonObject.length()>0)){
 
                                     EmailSender emailSender=new EmailSender();
                                     emailSender.SendVerificationEmail(user.getEmail(),user.getVcode());
@@ -188,6 +186,14 @@ public class RegistrationActivity extends AppCompatActivity {
                                             .show();
 
 
+                            }else{
+                                DataHold.IsSuccess=false;
+                                progressDialog.dismiss();
+                                new MaterialAlertDialogBuilder(RegistrationActivity.this)
+                                        .setTitle("Registration Not Success")
+                                        .setMessage("You Already have an account")
+                                        .setNegativeButton("ok",null)
+                                        .show();
                             }
                         }catch (JSONException e) {
 

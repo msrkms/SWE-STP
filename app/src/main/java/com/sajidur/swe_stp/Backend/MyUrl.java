@@ -4,8 +4,8 @@ public class MyUrl {
     public static final String Host="http://diuswetest-001-site1.itempurl.com";
     private static final String ApiURl=Host+"/Api";
 
-    public static final String Registration=ApiURl+"/Registration";
-    public static final String Verification=ApiURl+"/Verify";
+    public static final String Registration=ApiURl+"/SignUp";
+    public static final String Verification=ApiURl+"/VerifyUser";
     public static final String Login=ApiURl+"/Login";
     public static final String ALLEVENTS=ApiURl+"/getallevents";
     public static final String EventByID=ApiURl+"/sweevents/"; //+ID
