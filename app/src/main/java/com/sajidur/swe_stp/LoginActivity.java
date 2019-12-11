@@ -44,7 +44,7 @@ import java.util.Scanner;
 public class LoginActivity extends AppCompatActivity {
     private MaterialButton buttonLogin;
     ProgressDialog progressDialog;
-    private TextView textViewSignUp,textViewForgetPassword;
+    private TextView textViewSignUp,textViewForgetPassword,textViewVerifyAccount;
     private TextInputEditText textInputEditTextEmail,textInputEditTextPassword;
     private  User user;
 
@@ -53,13 +53,14 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        checkUser();
 
         buttonLogin=(MaterialButton) findViewById(R.id.buttonLogin);
         textInputEditTextEmail=(TextInputEditText) findViewById(R.id.editTextEmail);
         textInputEditTextPassword=(TextInputEditText) findViewById(R.id.textInputEditTextloginPassword);
         textViewSignUp=(TextView) findViewById(R.id.textViewSignup);
         textViewForgetPassword=(TextView) findViewById(R.id.textViewforgotPassword);
-
+        textViewVerifyAccount=(TextView) findViewById(R.id.textViewVerify);
 
 
         textViewSignUp.setOnClickListener(new View.OnClickListener() {
@@ -76,11 +77,16 @@ public class LoginActivity extends AppCompatActivity {
                 user=new User();
                 String Email=textInputEditTextEmail.getText().toString();
                 String Password=textInputEditTextPassword.getText().toString();
-                if(Email.equals("admin")){
-                    intentToAdmin();
-                }else if(Email.equals("Student")){
-                    intentToStudent();
-                }
+                tryLogin(Email,Password);
+
+
+            }
+        });
+
+        textViewVerifyAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(LoginActivity.this,VerifyAccountActivity.class));
             }
         });
 
@@ -134,17 +140,15 @@ public class LoginActivity extends AppCompatActivity {
 
 
 
-    private void tryLogin( String Email, String Password){
+    private void tryLogin(final String Email, String Password){
         showLoading();
-        final String Url= MyUrl.Login;
 
-        final String inputEmail=Email;
 
         JSONObject postparams = new JSONObject();
         try {
 
-            postparams.put("email",user.getEmail());
-            postparams.put("password",user.getPassword());
+            postparams.put("Email",Email);
+            postparams.put("Password",Password);
 
         } catch (JSONException e) {
             e.printStackTrace();
@@ -163,15 +167,26 @@ public class LoginActivity extends AppCompatActivity {
                             user.setID(dataobj.getString("id"));
                             user.setEmail(dataobj.getString("email"));
                             user.setVcode(dataobj.getString("vCode"));
-                            user.setIsVerified(dataobj.getString("verify"));
+                            user.setIsVerified(dataobj.getString("isVerified"));
 
 
-                            if(user.getEmail().equals(inputEmail)){
+                            if(user.getEmail().equals(Email) && user.getIsVerified().equals("Verified")){
                                 DataHold.UserEmail=user.getEmail();
                                 DataHold.user=user;
                                 savetoSQLITE();
                                 createLoginFile(user.getEmail(),user.getPassword());
                                 intentFilter();
+                            }else{
+                                new MaterialAlertDialogBuilder(LoginActivity.this)
+                                        .setTitle("Failed")
+                                        .setMessage("Please Verify Your Account")
+                                        .setPositiveButton("Try Again", new DialogInterface.OnClickListener() {
+                                            @Override
+                                            public void onClick(DialogInterface dialogInterface, int i) {
+                                                progressDialog.dismiss();
+                                            }
+                                        })
+                                        .show();
                             }
 
                             progressDialog.dismiss();
@@ -220,7 +235,7 @@ public class LoginActivity extends AppCompatActivity {
     private void showLoading(){
         this.progressDialog= new ProgressDialog(this);
         progressDialog.setCancelable(true);
-        progressDialog.setTitle("Verifying");
+        progressDialog.setTitle("Please Wait");
         progressDialog.show();
     }
 
@@ -241,6 +256,7 @@ public class LoginActivity extends AppCompatActivity {
             ContentValues contentValues = new ContentValues();
             contentValues.put("Email",DataHold.user.getEmail());
             contentValues.put("Password",DataHold.user.getPassword());
+            contentValues.put("Role",DataHold.user.getRole());
             ss.insert("User",null,contentValues);
             ss.close();
         }catch (SQLException e){
@@ -258,6 +274,10 @@ public class LoginActivity extends AppCompatActivity {
             Cursor cursor = db.rawQuery(query, null);
             if(cursor.moveToFirst()){
                 DataHold.UserEmail=Email;
+                DataHold.user=new User();
+                DataHold.user.setEmail(Email);
+                DataHold.user.setRole(cursor.getString(cursor.getColumnIndex("Role")));
+                intentFilter();
 
             }else{
             }

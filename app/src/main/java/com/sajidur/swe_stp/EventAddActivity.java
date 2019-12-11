@@ -147,7 +147,7 @@ public class EventAddActivity extends AppCompatActivity {
     private void showLoading(){
         this.progressDialog= new ProgressDialog(this);
         progressDialog.setCancelable(true);
-        progressDialog.setTitle("Creating Account");
+        progressDialog.setTitle("Adding Event");
         progressDialog.show();
     }
 

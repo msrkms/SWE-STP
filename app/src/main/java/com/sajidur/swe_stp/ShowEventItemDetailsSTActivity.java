@@ -6,7 +6,11 @@ import android.os.Bundle;
 import android.widget.ImageView;
 
 import com.google.android.material.textfield.TextInputEditText;
+import com.sajidur.swe_stp.Backend.DateFormatting;
 import com.squareup.picasso.Picasso;
+
+import java.sql.Time;
+import java.text.SimpleDateFormat;
 
 public class ShowEventItemDetailsSTActivity extends AppCompatActivity {
 
@@ -22,6 +26,10 @@ public class ShowEventItemDetailsSTActivity extends AppCompatActivity {
         String description=getIntent().getStringExtra("description");
         String time=getIntent().getStringExtra("time");
         String date=getIntent().getStringExtra("date");
+
+        DateFormatting dateFormatting=new DateFormatting();
+        time=dateFormatting.timeConvert(time);
+        date=dateFormatting.dateConvert(date);
 
         imageViewST=(ImageView)findViewById(R.id.eventImageST);
         eventTitleST=(TextInputEditText)findViewById(R.id.eventTitleST);

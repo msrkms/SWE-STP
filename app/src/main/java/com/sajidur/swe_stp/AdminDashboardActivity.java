@@ -20,6 +20,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.File;
 import java.util.ArrayList;
 
 public class AdminDashboardActivity extends AppCompatActivity {
@@ -75,6 +76,8 @@ public class AdminDashboardActivity extends AppCompatActivity {
         materialCardViewLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                deleteLoginFile();
+                startActivity(new Intent(AdminDashboardActivity.this,LoginActivity.class));
                 AdminDashboardActivity.this.finish();
             }
         });
@@ -148,4 +151,14 @@ public class AdminDashboardActivity extends AppCompatActivity {
         }
     }*/
     //end getData
+
+
+    private void deleteLoginFile(){
+        File file=new File(getFilesDir().getAbsolutePath()+"/"+"User.txt");
+        try {
+            file.delete();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }
