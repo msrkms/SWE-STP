@@ -75,11 +75,20 @@ public class EventListActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 String id = DataHold.eventsArrayList.get(i).getID();
+                String imglink=DataHold.eventsArrayList.get(i).getImageUrl();
                 String title=DataHold.eventsArrayList.get(i).getTitle();
                 String description=DataHold.eventsArrayList.get(i).getDescription();
                 String time=DataHold.eventsArrayList.get(i).getEventTime();
                 String date= DataHold.eventsArrayList.get(i).getEventDate();
                 System.out.println(id+title+description+time+date);
+
+                Intent intent = new Intent(EventListActivity.this,ViewEventDetailsAdminActivity.class);
+                intent.putExtra("imglink",imglink);
+                intent.putExtra("title",title);
+                intent.putExtra("description",description);
+                intent.putExtra("time",time);
+                intent.putExtra("date",date);
+                startActivity(intent);
 
 
 

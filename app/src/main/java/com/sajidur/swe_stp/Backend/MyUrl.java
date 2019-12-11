@@ -1,6 +1,6 @@
 package com.sajidur.swe_stp.Backend;
 
-public class MyUrl {
+public class  MyUrl {
     public static final String Host="http://diuswetest-001-site1.itempurl.com";
     private static final String ApiURl=Host+"/Api";
 
